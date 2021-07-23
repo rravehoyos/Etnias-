@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	.conte{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 1320px;
+		height: 650px;
+		background-color: lightblue;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+	}
+	.a1{
+		position: absolute;
+		top: 60px;
+		left: 100px;
+		font-size: 100px;
+		color: white;
+		background: linear-gradient(to bottom, black 80%, purple 100%);
+		border-radius: 20px;
+	}	
+	.a1:hover{background: linear-gradient(to bottom, black 80%, purple 100%)}
+	.a2{
+		position: absolute;
+		top: 260px;
+		left: 100px;
+		font-size: 100px;
+		color: white;
+        background-color: black;
+		border-radius: 20px;
+	}	
+	.a2:hover{background: linear-gradient(to bottom, black 80%, purple 100%)}
+	.a3{
+		position: absolute;
+		top: 460px;
+		left: 100px;
+		font-size: 100px;
+		color: white;
+        background-color: black;
+		border-radius: 20px;
+	}	
+	.a3:hover{background: linear-gradient(to bottom, black 80%, purple 100%)}
+		.b1{
+		position: absolute;
+		top: 60px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background-color: lightgreen;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+		.b2{
+		position: absolute;
+		top: 60px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background-color: lightcyan;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		display: none;
+		animation: xd1;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+@keyframes xd1{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}		
+		.b3{
+		position: absolute;
+		top: 60px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background-color: lightcoral;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		display: none;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+	</style>
+</head>
+<body>
+<div class="conte">Titulo
+<button class="a1" onclick="s1()">1</button>
+<button class="a2" onclick="s2()">2</button>
+<button class="a3" onclick="s3()">3</button>
+<div class="b1"><br><br><br><br>Tema 1</div>
+<div class="b2"><br><br><br><br>Tema 2</div>
+<div class="b3"><br><br><br><br>Tema 3</div>
+</div>
+<script type="text/javascript">
+function s1(){
+	document.querySelector(".b1").style.display = "block";
+	document.querySelector(".b2").style.display = "none";
+	document.querySelector(".b3").style.display = "none";
+	document.querySelector(".a1").style.background = "linear-gradient(to bottom, black 80%, purple 100%)";
+	document.querySelector(".a2").style.background = "black";
+	document.querySelector(".a3").style.background = "black";
+}
+function s2(){
+	document.querySelector(".b2").style.display = "block";
+	document.querySelector(".b1").style.display = "none";
+	document.querySelector(".b3").style.display = "none";
+	document.querySelector(".a2").style.background = "linear-gradient(to bottom, black 80%, purple 100%)";
+	document.querySelector(".a1").style.background = "black";
+	document.querySelector(".a3").style.background = "black";
+}
+function s3(){
+	document.querySelector(".b3").style.display = "block";
+	document.querySelector(".b2").style.display = "none";
+	document.querySelector(".b1").style.display = "none";
+	document.querySelector(".a3").style.background = "linear-gradient(to bottom, black 80%, purple 100%)";
+	document.querySelector(".a1").style.background = "black";
+	document.querySelector(".a2").style.background = "black";
+}
+</script>
+</body>
+</html>

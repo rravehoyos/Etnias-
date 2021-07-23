@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	::-webkit-scrollbar{
+		width: 7px;
+	}
+	::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+	body{
+		background: url("fmapa.jpg") fixed no-repeat;
+		background-size: cover;
+	}
+	.fp2{
+		position: absolute;
+		top: 70px;
+		left: 70px;
+		width: 741px;
+		height: 853px;
+		background: url("mapa.png");
+		z-index: -1;
+		border-style: solid;
+		border-color: gray;
+		border-width: 15px;
+	}
+	.wayuu{
+		position: absolute;
+		top: 135px;
+		left: 540px;
+		font-size: 20px;
+		background: orange;
+		border-radius: 50px;
+	}
+	.wayuu:hover{
+		background: pink;
+	}
+	.zenu{
+		position: absolute;
+		top: 290px;
+		left: 360px;
+		font-size: 20px;
+		background: orange;
+		border-radius: 50px;
+	}
+	.zenu:hover{
+		background: pink;
+	}
+	.nasa{
+		position: absolute;
+		top: 580px;
+		left: 310px;
+		font-size: 20px;
+		background: darkred;
+		border-radius: 50px;
+	}
+	.nasa:hover{
+		background: red;
+	}
+	.pastos{
+		position: absolute;
+		top: 650px;
+		left: 295px;
+		font-size: 20px;
+		background: darkred;
+		border-radius: 50px;
+	}
+	.pastos:hover{
+		background: red;
+	}
+	.afro{
+		position: absolute;
+		top: 450px;
+		left: 600px;
+		font-size: 20px;
+		background: limegreen;
+		border-radius: 50px;
+	}
+	.afro:hover{
+		background: green;
+	}
+	.raizal{
+		position: absolute;
+		top: 90px;
+		left: 168px;
+		font-size: 20px;
+		background: hotpink;
+		border-radius: 50px;
+	}
+	.raizal:hover{
+		background: lightpink;
+	}
+	.palenquera{
+		position: absolute;
+		top: 200px;
+		left: 440px;
+		font-size: 20px;
+		background: orange;
+		border-radius: 50px;
+	}
+	.palenquera:hover{
+		background: pink;
+	}
+	.amazo{
+		position: absolute;
+		top: 690px;
+		left: 530px;
+		font-size: 20px;
+		background: seagreen;
+		border-radius: 50px;
+	}
+	.amazo:hover{
+		background: forestgreen;
+	}
+	.fpm{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: url("fbandera.jpg") fixed no-repeat;
+		background-size: cover;
+		display: none;
+		z-index: 5;
+	}
+	.jul201{
+		position: absolute;
+		position: fixed;
+		top: 5px;
+		left: 120px;
+		font-size: 50px;
+        color: white;
+		font-family: Berlin Sans FB;
+     background: linear-gradient(to bottom, yellow 50%, blue 60%, red 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 12;
+	}
+	.jul20{
+		position: absolute;
+		position: fixed;
+		top: 5px;
+		left: 120px;
+		font-size: 50px;
+        color: white;
+		font-family: Berlin Sans FB;
+		z-index: 12;
+	}
+	.bi{
+       position: absolute;
+       position: fixed;
+       top: 0px;
+       left: 0px;
+       width: 100%;
+       height: 70px;
+       background: linear-gradient(to bottom, black 0%, transparent 80%);
+       transition: 0.5s;
+	z-index: 10;
+	}
+	.menu{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+        width: 70px;
+        height: 100%;
+        background-color: black;
+        z-index: 7;
+	}
+	.bmenu{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 70px;
+        height: 80px;
+        border-style: none;
+        background: url("bmenu.jpg");
+        z-index: 11;
+	}
+	.bmenu1{
+		position: absolute;
+		position: fixed;
+		top: 12px;
+		left: -0.5px;
+		width: 68px;
+        height: 80px;
+        border-style: none;
+        background: url("bmenu1.jpg");
+        z-index: 11;
+        display: none;
+	}
+	.menud{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(129, 126, 126, 0.7);
+        display: none;
+        animation: emd;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+        z-index: 6;
+	}
+	@keyframes emd{
+		0%{left: -2000px}
+		100%{left: 0px}
+	}
+	.menud1{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: -2000px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(129, 126, 126, 0.7);
+        display: none;
+        animation: emd1;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+	}
+	@keyframes emd1{
+		0%{left: 0px}
+		100%{left: -2000px}
+	}
+	.conte{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 1320px;
+		height: 650px;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+	}
+	.a1{
+		position: absolute;
+		top: 150px;
+		left: 105px;
+		font-size: 50px;
+		color: white;
+		background: black;
+		width: 170px;
+		opacity: 0.8;
+	}	
+	.a2{
+		position: absolute;
+		top: 325px;
+		left: 105px;
+		font-size: 50px;
+		color: white;
+		background: black;
+		width: 170px;
+		opacity: 1;
+	}	
+	.a3{
+		position: absolute;
+		top: 500px;
+		left: 105px;
+		font-size: 50px;
+		color: white;
+		background: black;
+		width: 170px;
+		opacity: 0.8;
+	}	
+		.b1{
+		position: absolute;
+		top: 80px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background: url("fm1.jpg");
+		background-size: cover;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		display: none;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+		.b2{
+		position: absolute;
+		top: 80px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background: url("fm2.jpg");
+		background-size: cover;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		animation: xd1;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+@keyframes xd1{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}		
+		.b3{
+		position: absolute;
+		top: 80px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background: url("fm3.jpg");
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		background-size: cover;
+		display: none;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+.tf1{
+	position: absolute;
+	top: 10px;
+	left: 850px;
+	color: white;
+	font-size: 80px;
+	font-family: Berlin Sans FB;
+	z-index: 1;
+  -webkit-text-stroke: 2px black;
+}
+	.tp1{
+		position: absolute;
+		top: 10px;
+		left: 850px;
+		font-size: 80px;
+        color: white;
+		font-family: Berlin Sans FB;
+     background: linear-gradient(to bottom, yellow 30%, blue 35%, red 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px black;
+   z-index: 1;
+	}
+.tf{
+	position: absolute;
+	top: 10px;
+	left: 150px;
+	color: white;
+	font-size: 50px;
+	font-family: Berlin Sans FB;
+	z-index: 1;
+  -webkit-text-stroke: 2px black;
+}
+.pdp{
+	position: absolute;
+	top: 923px;
+	left: 0px;
+	height: 50%;
+	width: 100%;
+	background: #4A4646;
+}
+.ec{
+	position: absolute;
+	top: 120px;
+	left: 1070px;
+	background: url("lneo.png");
+	width: 158px;
+	height: 149px;
+}
+.avet{
+position: absolute;
+top: 350px;
+left: 900px;
+width: 400px;
+height: 410px;
+background-color: rgba(0, 0, 0, 0.4);
+color: white;
+font-size: 25px;
+	font-family: Berlin Sans FB;
+  text-align: justify;
+ padding-left: 5px;
+padding-top: 5px;
+padding-right: 5px;
+}
+@keyframes a{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.iwa{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("wayuu.jpg") fixed no-repeat;
+	background-size: cover; 
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.ize{
+	position: absolute;
+	top: 70px;
+	left: 711px;
+	width: 648.4px;
+	height: 853px;
+	background: url("zenu.jpeg");
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.ina{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("nasa.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.ipa{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("pastos.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.iaf{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("afrocol.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.ira{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("raizal.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.ipal{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("palen.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.iam{
+	position: absolute;
+	top: 70px;
+	left: 811px;
+	width: 548.4px;
+	height: 853px;
+	background: url("amazonas.jpg") fixed no-repeat;
+	background-size: cover;
+	z-index: -5;
+	display: none;
+	animation: a;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+.vaec4{
+position: absolute;
+top: 643px;
+left: 16px;
+position: fixed;
+z-index: 14;
+background: url("lneo.png");
+background-size: cover;
+width: 40px;
+height: 40px;
+border-style: none;
+}
+.ave{
+padding: left;
+padding: top;
+}
+	</style>
+</head>
+<body>
+	<button class="vaec4" onclick="window.location.href='https://neosistemas.edu.co/ceneosistemas/'"></button>
+		<div class="menu"></div>
+	<div class="bi"></div>
+<div class="jul20" id="me">Diversidad Étnica y Cultural en Colombia</div>
+	<button class="bmenu" onclick="em()"></button>
+	<button class="bmenu1" onclick="sm()"></button>
+<div class="fpm"></div>
+	<div class="menud">
+	<div class="conte">
+<button class="a1" onclick="sp1()" onmouseover="cb1()">Inicio</button>
+<button class="a2" onclick="sp2()" onmouseover="cb2()">Mapa</button>
+<button class="a3" onclick="sp3()" onmouseover="cb3()">Vídeos</button>
+<div class="b1"><br><br><br><br><br><br><br><br><br>Página principal de información</div>
+<div class="b2"><br><br><br><br><br><br><br><br><br>Mapa interactivo</div>
+<div class="b3"><br><br><br><br><br><br><br><br><br>Contenido multimedia</div>
+<div class="fpm"></div>
+</div>
+	</div>
+	<div class="menud1"></div>
+<div class="fp2"></div>
+<div class="avet"><div class="ave" id="val"></div></div>
+<div class="iwa"></div>
+<div class="ize"></div>
+<div class="ina"></div>
+<div class="ipa"></div>
+<div class="iaf"></div>
+<div class="ira"></div>
+<div class="ipal"></div>
+<div class="iam"></div>
+<button class="wayuu" onclick="sw()">👁‍🗨</button>
+<button class="zenu" onclick="sz()">👁‍🗨</button>
+<button class="nasa" onclick="sn()">👁‍🗨</button>
+<button class="pastos" onclick="sp()">👁‍🗨</button>
+<button class="afro" onclick="sa()">👁‍🗨</button>
+<button class="raizal" onclick="sr()">👁‍🗨</button>
+<button class="palenquera" onclick="spa()">👁‍🗨</button>
+<button class="amazo" onclick="sam()">👁‍🗨</button>
+<h2 class="tf1" onclick="ctp()" id="i">Mapa<br>Interactivo</h2>
+	<div class="pdp"><div class="ec"></div><h2 class="tf">C.E. Neosistemas<br>Grado: 10°<br>Acto conmemorativo 20 de Julio<br>Autor: Samuel Bustamante Carmona</h2></div>
+<script type="text/javascript">
+var scrollPos = 0;
+window.addEventListener('scroll', function(){
+  if ((document.body.getBoundingClientRect()).top > scrollPos){
+		document.querySelector(".bi").style.background="linear-gradient(to bottom, black 0%, transparent 80%)";
+        document.getElementById("me").className = "jul20";}
+  else{
+		document.querySelector(".bi").style.backgroundColor="black";
+        document.getElementById("me").className = "jul201";}
+  scrollPos = (document.body.getBoundingClientRect()).top;
+});
+//Biodiversidad etnica y cultural
+//Establecer relaciones de lo etnico con la tradicion y la costumbre(indigenas), cultura, deporte, música, literatura
+//Relación geográfica con la asentación de las comunidades	
+</script>
+<script type="text/javascript">
+	function em(){
+		document.querySelector("body").style.overflowY="hidden";
+		document.querySelector(".menud").style.display="block";
+		document.querySelector(".fpm").style.display="block";
+		document.querySelector(".menud1").style.display="none";
+		document.querySelector(".bi").style.backgroundColor="black";
+        document.getElementById("me").className = "jul201";
+		document.querySelector(".bmenu").style.display="none";
+		document.querySelector(".bmenu1").style.display="block";
+	}
+	function sm(){
+		document.querySelector("body").style.overflowY="visible";
+		document.querySelector(".menud").style.display="none";
+		document.querySelector(".fpm").style.display="none";
+		document.querySelector(".menud1").style.display="block";
+		document.querySelector(".bi").style.background="linear-gradient(to bottom, black 0%, transparent 80%)";
+        document.getElementById("me").className = "jul20";
+		document.querySelector(".bmenu1").style.display="none";
+		document.querySelector(".bmenu").style.display="block";
+	}
+</script>
+<script type="text/javascript">
+function cb1(){
+	document.querySelector(".b1").style.display = "block";
+	document.querySelector(".b2").style.display = "none";
+	document.querySelector(".b3").style.display = "none";
+	document.querySelector(".a1").style.opacity = 1;
+	document.querySelector(".a2").style.opacity = 0.8;
+	document.querySelector(".a3").style.opacity = 0.8;
+}
+function cb2(){
+	document.querySelector(".b2").style.display = "block";
+	document.querySelector(".b1").style.display = "none";
+	document.querySelector(".b3").style.display = "none";
+	document.querySelector(".a1").style.opacity = 0.8;
+	document.querySelector(".a2").style.opacity = 1;
+	document.querySelector(".a3").style.opacity = 0.8;
+}
+function cb3(){
+	document.querySelector(".b3").style.display = "block";
+	document.querySelector(".b2").style.display = "none";
+	document.querySelector(".b1").style.display = "none";
+	document.querySelector(".a1").style.opacity = 0.8;
+	document.querySelector(".a2").style.opacity = 0.8;
+	document.querySelector(".a3").style.opacity = 1;
+}
+</script>
+<script type="text/javascript">
+	function sp1(){
+		window.location.href="index.html"
+	}
+	function sp2(){
+		window.location.href="mapa.html"
+	}
+	function sp3(){
+		window.location.href="multi.html"
+	}
+</script>
+<script type="text/javascript">
+	function sw(){
+		val.innerHTML = 'Los Wayuu se encuentran ubicados en la península de La Guajira al norte de Colombia y al noroeste de Venezuela en el estado de Zulia, sobre el mar Caribe. Ocupan un área de 1.080.336 hectáreas, las cuales están localizadas en el resguardo de la Alta y Media Guajira, ocho resguardos más ubicados en el sur y la Media Guajira y la reserva de Carraipía. Este pueblo indígena se encuentra ubicado en los municipios de Barrancas, Distracción, Fonseca, Maicao, Uribía, Manaure y Riohacha; así mismo, hacen presencia en el estado venezolano de Zulia.';
+	document.querySelector(".iwa").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".ina").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function sz(){
+		val.innerHTML = 'El pueblo Senú se localiza en los resguardos de San Andrés de Sotavento, Departamento de Córdoba y en El Volao, en el Urabá Antioqueño. Hay numerosos asentamientos, parcialidades y propietarios individuales en Córdoba, Sucre, Antioquia y Chocó. La mayor parte de la población habita en el resguardo de San Andrés de Sotavento.';
+	document.querySelector(".ize").style.display="block";
+	document.querySelector(".iwa").style.display="none";
+    document.querySelector(".ina").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function sn(){
+		val.innerHTML = 'Los paeces o nasa, palabra que significa gente, ocupaban a la llegada de los españoles en el siglo XVI terrenos en inmediaciones de La Plata en el departamento del Huila, organizados en parcialidades a cargo de una persona, y su poblamiento disperso fue calculado en 10 mil habitantes dedicados al cultivo de la yuca, el maíz y la coca. Compartían el territorio junto con los Pijaos (Caribes) y Guanacas, con los que sostenían alianzas militares e intercambios económicos.';
+	document.querySelector(".ina").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".iwa").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function sp(){
+		val.innerHTML = 'Los Pastos viven principalmente de la agricultura y de las actividades pecuarias orientadas a la producción de leche y ganado lanar. Los territorios ubicados en las partes altas producen tubérculos como papa, oca, maíz, calabaza, arracacha, guineos, quinua, hortalizas, frutas y especies menores. En el clima medio cultivan plátano, café y caña de azúcar. Dependen principalmente de la mano de obra familiar y del trabajo comunitario. Para la venta producen quesos y otros derivados de la leche, dulce de caña y productos de la lana como cobijas.';
+	document.querySelector(".ipa").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".ina").style.display="none";
+	document.querySelector(".iwa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function sa(){
+		val.innerHTML = 'Son los grupos humanos que hacen presencia en todo el territorio nacional (urbano-rural), de raíces y descendencia histórica, étnica y cultural africana nacidos en Colombia, con su diversidad racial, lingüística y folclórica.';
+	document.querySelector(".iaf").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".ina").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iwa").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function sr(){
+		val.innerHTML = 'Los Raizales son la población nativa de las Islas de San Andrés, Providencia Y Santa Catalina descendientes de la unión entre europeos (principalmente ingleses, españoles y holandeses) y esclavos africanos. Se distinguen por su cultura, lengua (creole), creencias religiosas (iglesia bautista) y pasado histórico similar a los pueblos antillanos como Jamaica y Haití. Dada su especificidad cultural ha sido sujeto de políticas, planes y programas socio-culturales diferenciados de otras comunidades negras del continente colombiano.';
+	document.querySelector(".ira").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".ina").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".iwa").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function spa(){
+		val.innerHTML = 'La comunidad palenquera está conformada por los descendientes de los esclavizados que mediante actos de resistencia y de libertad, se refugiaron en los territorios de la Costa Norte de Colombia desde el Siglo XV denominados palenques. Existen 4 Palenques reconocidos: San Basilio de Palenque (Mahates – Bolívar), San José de Uré (Córdoba), Jacobo Pérez escobar (Magdalena) y La Libertad (Sucre).';
+	document.querySelector(".ipal").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".ina").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".iwa").style.display="none";
+	document.querySelector(".iam").style.display="none";
+	}
+	function sam(){
+		val.innerHTML = 'Los pueblos indígenas del Sur de la Amazonía Colombiana se Caracterizan por que tienen sus propios sistemas tradicionales de autoridad, enseñanza y aprendizaje, de salud - medicina tradicional, manejo ambiental, entre otros, estas particularidades están reconocidos por las leyes colombianas y acuerdos internacionales.';
+	document.querySelector(".iam").style.display="block";
+	document.querySelector(".ize").style.display="none";
+	document.querySelector(".ina").style.display="none";
+	document.querySelector(".ipa").style.display="none";
+	document.querySelector(".iaf").style.display="none";
+	document.querySelector(".ira").style.display="none";
+	document.querySelector(".ipal").style.display="none";
+	document.querySelector(".iwa").style.display="none";
+	}
+	function ctp(){
+		i.className="tp1";
+	}
+</script>
+</body>
+</html>

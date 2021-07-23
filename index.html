@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title> 
+	<style type="text/css">
+html{
+	scroll-behavior: smooth;
+}
+	::-webkit-scrollbar{
+		width: 7px;
+	}
+	::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+	body{
+		  /*/overflow-y: hidden;/*/
+	}
+	.temporal{
+		position: absolute;
+		top: 2000px;
+		width: 10px;
+		height: 10px;
+	}
+	.fp1{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: url("fbandera.jpg");
+		background-size: cover;
+	}
+	.fpm{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: url("fbandera.jpg") fixed no-repeat;
+		background-size: cover;
+		display: none;
+		z-index: 5;
+	}
+	.jul201{
+		position: absolute;
+		position: fixed;
+		top: 5px;
+		left: 120px;
+		font-size: 50px;
+        color: white;
+		font-family: Berlin Sans FB;
+     background: linear-gradient(to bottom, yellow 50%, blue 60%, red 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 12;
+	}
+	.jul20{
+		position: absolute;
+		position: fixed;
+		top: 5px;
+		left: 120px;
+		font-size: 50px;
+        color: white;
+		font-family: Berlin Sans FB;
+		z-index: 12;
+	}
+	.bi{
+       position: absolute;
+       position: fixed;
+       top: 0px;
+       left: 0px;
+       width: 100%;
+       height: 70px;
+       background: linear-gradient(to bottom, black 0%, transparent 80%);
+       transition: 0.5s;
+	z-index: 10;
+	}
+	.menu{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+        width: 70px;
+        height: 100%;
+        background-color: black;
+        z-index: 7;
+	}
+	.bmenu{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 70px;
+        height: 80px;
+        border-style: none;
+        background: url("bmenu.jpg");
+        z-index: 11;
+	}
+	.bmenu1{
+		position: absolute;
+		position: fixed;
+		top: 12px;
+		left: -0.5px;
+		width: 68px;
+        height: 80px;
+        border-style: none;
+        background: url("bmenu1.jpg");
+        z-index: 11;
+        display: none;
+	}
+	.menud{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: none;
+        animation: emd;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+        background: rgba(129, 126, 126, 0.7);
+        z-index: 6;
+	}
+	@keyframes emd{
+		0%{left: -2000px}
+		100%{left: 0px}
+	}
+	.menud1{
+		position: absolute;
+		position: fixed;
+		top: 0px;
+		left: -2000px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(129, 126, 126, 0.7);
+        display: none;
+        animation: emd1;
+        animation-iteration-count: 1;
+        animation-duration: 0.5s;
+	}
+	@keyframes emd1{
+		0%{left: 0px}
+		100%{left: -2000px}
+	}
+	.conte{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 1320px;
+		height: 650px;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+	}
+	.a1{
+		position: absolute;
+		top: 150px;
+		left: 105px;
+		font-size: 50px;
+		color: white;
+		background: black;
+		width: 170px;
+		opacity: 1;
+	}	
+	.a2{
+		position: absolute;
+		top: 325px;
+		left: 105px;
+		font-size: 50px;
+		color: white;
+		background: black;
+		width: 170px;
+		opacity: 0.8;
+	}	
+	.a3{
+		position: absolute;
+		top: 500px;
+		left: 105px;
+		font-size: 50px;
+		color: white;
+		background: black;
+		width: 170px;
+		opacity: 0.8;
+	}	
+		.b1{
+		position: absolute;
+		top: 80px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background: url("fm1.jpg");
+		background-size: cover;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+		.b2{
+		position: absolute;
+		top: 80px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background: url("fm2.jpg");
+		background-size: cover;
+		text-align: center;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		display: none;
+		animation: xd1;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
+@keyframes xd1{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}		
+		.b3{
+		position: absolute;
+		top: 80px;
+		left: 300px;
+		width: 1000px;
+		height: 570px;
+		background: url("fm3.jpg");
+		text-align: center;
+		background-size: cover;
+		font-family: Berlin Sans FB;
+		font-size: 50px;
+		display: none;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+.tp{
+	position: absolute;
+	top: 60px;
+	left: 100px;
+	color: white;
+	font-size: 80px;
+	font-family: Berlin Sans FB;
+	z-index: 1;
+  -webkit-text-stroke: 2px black;
+}
+.tf{
+	position: absolute;
+	top: 10px;
+	left: 150px;
+	color: white;
+	font-size: 50px;
+	font-family: Berlin Sans FB;
+	z-index: 1;
+  -webkit-text-stroke: 2px black;
+}
+	.tp1{
+		position: absolute;
+		top: 60px;
+		left: 100px;
+		font-size: 80px;
+        color: white;
+		font-family: Berlin Sans FB;
+     background: linear-gradient(to bottom, yellow 30%, blue 35%, red 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px black;
+   z-index: 1;
+	}
+.ec{
+	position: absolute;
+	top: 120px;
+	left: 1070px;
+	background: url("lneo.png");
+	width: 158px;
+	height: 149px;
+}
+.ip1{
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 100%;
+	height: 80%;
+	background: url("fi1.jpg");
+	background-size: cover;
+}
+.ip2{
+	position: absolute;
+	top: 180%;
+	left: 0px;
+	width: 100%;
+	height: 80%;
+	background: url("fi2.jpg");
+	background-size: cover;
+}
+.ip3{
+	position: absolute;
+	top: 260%;
+	left: 0px;
+	width: 100%;
+	height: 80%;
+	background: url("fi3.jpg");
+	background-size: cover;
+}
+.pdp{
+	position: absolute;
+	top: 340%;
+	left: 0px;
+	height: 50%;
+	width: 100%;
+	background: #4A4646;
+}
+	.ab1{
+		position: absolute;
+		top: 190px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		background: black;
+		color: white;
+		opacity: 1;
+	}	
+	.ab2{
+		position: absolute;
+		top: 265px;
+		left: 105px;
+		font-size: 40px;
+		color: white;
+		background: black;
+		opacity: 0.8;
+	}	
+	.ab3{
+		position: absolute;
+		top: 340px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+			.ba1{
+		position: absolute;
+		top: 220px;
+		left: 520px;
+		width: 700px;
+		height: 280px;
+		background: black;
+		color: white;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;	
+		opacity: 0.8;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+			.ii{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("indigenas.jpeg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+		.ba2{
+		position: absolute;
+		top: 350px;
+		left: 520px;
+		width: 700px;
+		height: 100px;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;	
+		background: blue;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		display: none;
+		animation: xd1;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}
+@keyframes xd1{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}		
+			.ia{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("afros.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.ba3{
+		position: absolute;
+		top: 220px;
+		left: 520px;
+		width: 700px;
+		height: 275px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.ig{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("gitanos.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bb1{
+		position: absolute;
+		top: 10px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		background: black;
+		color: white;
+		opacity: 1;
+	}	
+	.bb2{
+		position: absolute;
+		top: 85px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;
+		opacity: 0.8;
+	}	
+	.bb3{
+		position: absolute;
+		top: 160px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+	.bb4{
+		position: absolute;
+		top: 235px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+	.bb5{
+		position: absolute;
+		top: 310px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+	.bb6{
+		position: absolute;
+		top: 385px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+	.bb7{
+		position: absolute;
+		top: 470px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+			.bba1{
+		position: absolute;
+		top: 260px;
+		left: 520px;
+		width: 700px;
+		height: 240px;
+		background: black;
+		color: white;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;	
+		opacity: 0.8;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+			.idi{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("dialectos.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+		.bba2{
+		position: absolute;
+		top: 220px;
+		left: 520px;
+		width: 700px;
+		height: 290px;
+		background: black;
+		color: white;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd1;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;	
+		opacity: 0.8;
+		display: none;
+		}
+@keyframes xd1{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}		
+			.il{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("literatura.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bba3{
+		position: absolute;
+		top: 260px;
+		left: 520px;
+		width: 700px;
+		height: 235px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.ide{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("deporte.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bba4{
+		position: absolute;
+		top: 260px;
+		left: 520px;
+		width: 700px;
+		height: 235px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.iga{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("gastronomia.png");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bba5{
+		position: absolute;
+		top: 290px;
+		left: 520px;
+		width: 700px;
+		height: 205px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.iarq{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("arquitectura.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bba6{
+		position: absolute;
+		top: 260px;
+		left: 520px;
+		width: 700px;
+		height: 235px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.imu{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("musica.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bba7{
+		position: absolute;
+		top: 260px;
+		left: 520px;
+		width: 700px;
+		height: 235px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.ifo{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("procesiones.jpeg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bc1{
+		position: absolute;
+		top: 130px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		background: black;
+		color: white;
+		opacity: 1;
+	}	
+	.bc2{
+		position: absolute;
+		top: 265px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;
+		opacity: 0.8;
+	}	
+	.bc3{
+		position: absolute;
+		top: 400px;
+		left: 105px;
+		width: 315px;
+		font-size: 40px;
+		color: white;
+		background: black;		
+		opacity: 0.8;
+	}
+			.bbc1{
+		position: absolute;
+		top: 290px;
+		left: 520px;
+		width: 700px;
+		height: 210px;
+		background: black;
+		color: white;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;	
+		opacity: 0.8;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+			.ibn{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("festivalnegrosblancos.jpeg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+	}
+@keyframes xd{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}	
+		.bbc2{
+		position: absolute;
+		top: 220px;
+		left: 520px;
+		width: 700px;
+		height: 290px;
+		background: black;
+		color: white;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd1;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;	
+		opacity: 0.8;
+		display: none;
+		}
+@keyframes xd1{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}		
+			.iba{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("carnavalbarranquilla.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+		.bbc3{
+		position: absolute;
+		top: 290px;
+		left: 520px;
+		width: 700px;
+		height: 205px;
+		background: red;
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd2;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+		background: black;
+		color: white;
+		opacity: 0.8;
+	}	
+@keyframes xd2{
+0%{width: 1px;height: 1px;font-size: 0px;}
+}
+			.iff{
+		position: absolute;
+		top: 80px;
+		left: 620px;
+		width: 700px;
+		height: 280px;
+		background: url("feriadelasflores.jpg");
+		background-size: cover;
+		text-align: justify;
+		font-family: Berlin Sans FB;
+		font-size: 27px;
+		animation: xd;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px black;
+display: none;
+	}
+.vaec{
+position: absolute;
+top: 430px;
+left: 16px;
+position: fixed;
+color: white;
+z-index: 14;
+background-color: black;
+font-size: 30px;
+}
+.vaec1{
+position: absolute;
+top: 480px;
+left: 15px;
+position: fixed;
+color: white;
+z-index: 14;
+background-color: black;
+font-size: 30px;
+}
+.vaec2{
+position: absolute;
+top: 530px;
+left: 27px;
+position: fixed;
+color: white;
+z-index: 14;
+background-color: black;
+font-size: 30px;
+}
+.vaec3{
+position: absolute;
+top: 580px;
+left: 18px;
+position: fixed;
+color: white;
+z-index: 14;
+background-color: black;
+font-size: 30px;
+}
+.vaec4{
+position: absolute;
+top: 643px;
+left: 16px;
+position: fixed;
+z-index: 14;
+background: url("lneo.png");
+background-size: cover;
+width: 40px;
+height: 40px;
+border-style: none;
+}
+	</style>
+</head>
+<body>
+	<a class="vaec" href="#ec">EC</a>
+	<a class="vaec1" href="#dg">DG</a>
+	<a class="vaec2" href="#t">T</a>
+	<a class="vaec3" href="#i">🏠</a>
+	<button class="vaec4" onclick="window.location.href='https://neosistemas.edu.co/ceneosistemas/'"></button>
+	<div class="menu"></div>
+	<h2 class="tp" onclick="ctp()" id="i">Diversidad Étnica y Cultural en Colombia</h2>
+	<div class="temporal"></div>
+	<div class="fp1"></div>
+	<div class="bi"></div>
+<div class="jul20" id="me">Diversidad Étnica y Cultural en Colombia</div>
+	<button class="bmenu" onclick="em()"></button>
+	<button class="bmenu1" onclick="sm()"></button>
+<div class="fpm"></div>
+	<div class="menud">
+	<div class="conte">
+<button class="a1" onclick="sp1()" onmouseover="cb1()">Inicio</button>
+<button class="a2" onclick="sp2()" onmouseover="cb2()">Mapa</button>
+<button class="a3" onclick="sp3()" onmouseover="cb3()">Vídeos</button>
+<div class="b1"><br><br><br><br><br><br><br><br><br>Página principal de información</div>
+<div class="b2"><br><br><br><br><br><br><br><br><br>Mapa interactivo</div>
+<div class="b3"><br><br><br><br><br><br><br><br><br>Contenido multimedia</div>
+<div class="fpm"></div>
+</div>
+	</div>
+	<div class="menud1"></div>
+	<div class="ip1">
+<div class="conte" id="ec">Etnias en Colombia
+<button class="ab1" onclick="spm1()">Indígenas</button>
+<button class="ab2" onclick="spm2()">Afrocolombianos</button>
+<button class="ab3" onclick="spm3()">Gitanos/Rom</button>
+<div class="ii"></div>
+<div class="ba1">La población indígena en Colombia representa el 4,4% de la población total del país, sumando 1.905.617 indígenas de todos los pueblos. Los departamentos en los que se ubica la mayor cantidad de población indígena son La Guajira, con 394.683 habitantes; Cauca, con 308.455; Nariño con 206.455; Córdoba, con 202.621 y Sucre con 104.890. Así mismo, las etnias con mayor número de miembros son la Wayuu (380.460), la Zenú, (307.091); los Nasa, (243.176) y Pastos (163.873). Estos pueblos concentran el 58,1% de la población indígena colombiana.
+</div>
+<div class="ia"></div>
+<div class="ba2">La población negra, afrocolombiana, raizal y palenquera NARP en el país ascendió a 4,671,1603 de personas, lo que corresponde al 9.34% de la población total del país.</div>
+<div class="ig"></div>
+<div class="ba3">El pueblo rom o gitano se consolida y fortalece como grupo étnico que hacer parte de la diversidad étnica y cultural de la nación colombiana. Su origen se remonta a más de 1000 años, proviene del norte de la India y conserva un alto bagaje cultural que lo diferencia de otros pueblos y de la sociedad mayoritaria. En este sentido, cuenta con unos elementos identitarios que los diferencian notablemente de los demás grupos étnicos de la sociedad. Se es rom o gitano por derecho de nacimiento y se lleva la sangre gitana.
+</div>
+</div>
+	</div>
+	<div class="ip2">
+		<div class="conte" id="dg">Datos Generales
+<button class="bb1" onclick="spma1()">Dialectos</button>
+<button class="bb2" onclick="spma2()">Literatura</button>
+<button class="bb3" onclick="spma3()">Deportes</button>
+<button class="bb4" onclick="spma4()">Gastronomía</button>
+<button class="bb5" onclick="spma5()">Arquitectura</button>
+<button class="bb6" onclick="spma6()">Música</button>
+<button class="bb7" onclick="spma7()">Religión</button>
+<div class="idi"></div>
+<div class="bba1">Al ser un país multicultural, el dialecto varía en cada una de las regiones geográficas del país. Los dialectos principales en los que se suele clasificar el español colombiano son:
+
+Español costeño, Español paisa, Español chocoano (ecuatorial), Español vallecaucano, Español andino (pastuso o serrano), Español tolimense (opita), Español cundiboyacense, Español bogotano (rolo o cachaco), Español llanero, Español santandereano y Español amazónico.
+</div>
+<div class="il"></div>
+<div class="bba2">En cuanto a la literatura durante la época colonial sobresalieron, en la poesía, Juan de Castellanos y la mística madre Inés del Castillo, y en la narrativa, Juan Rodríguez Freyle. En el Siglo XIX se destacaron los poetas Gregorio Gutiérrez González, Luis Vargas Tejada, José Eusebio Caro y Rafael Pombo. Entre los modernistas se distinguieron José Asunción Silva y, posteriormente, Guillermo Valencia, Julio Flórez y Porfirio Barba Jacob. La prosa costumbrista tuvo notables representantes en Eugenio Díaz y José Manuel Marroquín.</div>
+<div class="ide"></div>
+<div class="bba3">El fútbol y el ciclismo son los deportes Nacionales por excelencia, al igual que en la gran mayoría de países de América Latina. Ver los partidos de fútbol en la televisión es uno de los pasatiempos nacionales y de las actividades más populares. Las victorias de la selección nacional son celebradas de forma exuberante. Sin embargo, se considera una ocupación masculina: muchos hombres y muchachos dedican su tiempo libre a estas modalidades deportivas.
+</div>
+<div class="iga"></div>
+<div class="bba4">En Colombia se consumen muchas variedades de frutas nativas, totalmente desconocidas en Europa y en América del Norte, como la guayaba, el zapote, el lulo, la curuba, el mamoncillo, el corozo, la uchuva, la feijoa, la granadilla, el mamey, el borojó, el mango, el chontaduro, el tamarindo, el tomate de árbol, la guanábana, la badea, y la pitahaya. Algunas solo se consumen en algunas regiones, y por lo tanto su consumo no es generalizado.
+</div>
+<div class="iarq"></div>
+<div class="bba5">La arquitectura colombiana presenta influencias del arte español, que se manifestaron principalmente durante la época de la colonización española entre el siglo XVI y XVII. La arquitectura colombiana se divide en los períodos de arquitectura indígena, colonial (religiosa y militar) del siglo XIX, republicana (1880-1930), de transición (1930-1960), modernista (1970-2015) y actual (2015-2021).
+</div>
+<div class="imu"></div>
+<div class="bba6">La música tradicional colombiana se deriva de una mezcla de ritmos indígenas, influencias africanas, europeas (especialmente españolas), de las formas musicales modernas de América y del Caribe. Algunos ritmos populares son la cumbia y el vallenato en la zona Caribeña, el bambuco y el pasillo en la zona Andina, el joropo en la zona Llanera y el currulao en la zona Pacífico. La salsa también ha sido reconocida como uno de los ritmos predominantes del país.
+</div>
+<div class="ifo"></div>
+<div class="bba7">La mayor parte de la población colombiana es católica, existiendo grupos minoritarios que siguen otras creencias. Dado al cauce histórico, el catolicismo fue la religión oficial de Colombia hasta 1991, cuando la Constitución de ese mismo año consagró al Estado colombiano como un Estado laico, brindando garantías a la libertad de cultos. De todas formas, la Iglesia católica ha continuado conservando privilegios sobre otras religiones, lo que creó algunas tensiones.
+</div>
+</div>
+	</div>
+	<div class="ip3">
+		<div class="conte" id="t">Tradiciones
+<button class="bc1" onclick="spmb1()">C. de Negros y blancos</button>
+<button class="bc2" onclick="spmb2()">C. de Barranquilla</button>
+<button class="bc3" onclick="spmb3()">F. de las flores</button>
+<div class="ibn"></div>
+<div class="bbc1">El Carnaval de Negros y Blancos suele celebrarse durante la primera semana de enero en el sur de Colombia, específicamente en Pasto, Nariño. Es una de las tradiciones colombianas de costumbre nativa andina y prehispánica, donde en los últimos días los habitantes se pintan las caras de negro y blanco para hacer una celebración de la diferencia étnica y cultural de esta región, ¡algo totalmente imperdible!
+</div>
+<div class="iba"></div>
+<div class="bbc2">Este es uno de los festivales más importantes de todo el país, el Carnaval de Barranquilla es una tradición en la que durante varios días el Atlántico se transforma en una fiesta de color y baile, para demostrar la diversidad cultural del caribe colombiano. Los días de fiesta y música no paran. Todo inicia con un precarnaval, donde se lleva a cabo: la lectura del bando, la coronación a la reina, el carnaval gay, el carnaval de los niños y la guacherna; para luego dar inicio al carnaval con la batalla de flores, la gran parada, el festival de las orquestas y finalizar con el entierro de Joselito.</div>
+<div class="iff"></div>
+<div class="bbc3">El ambiente de carnaval que vive Medellín durante estos días ofrece una amplia diversidad de eventos y espectáculos, no todos relacionados con las flores, pero todo el jolgorio lleva ese nombre general de "Feria de las flores" puesto que las flores son el marco principal de las festividades, a la vez que ofrecen los espectáculos y escenas más llamativas y bellas, además únicas en el mundo.
+</div>
+</div>		
+	</div>
+	<div class="pdp"><div class="ec"></div><h2 class="tf">C.E. Neosistemas<br>Grado: 10°<br>Acto conmemorativo 20 de Julio<br>Autor: Samuel Bustamante Carmona</h2></div>
+<script type="text/javascript">
+var scrollPos = 0;
+window.addEventListener('scroll', function(){
+  if ((document.body.getBoundingClientRect()).top > scrollPos){
+		document.querySelector(".bi").style.background="linear-gradient(to bottom, black 0%, transparent 80%)";
+        document.getElementById("me").className = "jul20";}
+  else{
+		document.querySelector(".bi").style.backgroundColor="black";
+        document.getElementById("me").className = "jul201";}
+  scrollPos = (document.body.getBoundingClientRect()).top;
+});
+//Biodiversidad etnica y cultural
+//Establecer relaciones de lo etnico con la tradicion y la costumbre(indigenas), cultura, deporte, música, literatura
+//Relación geográfica con la asentación de las comunidades	
+</script>
+<script type="text/javascript">
+	function em(){
+		document.querySelector("body").style.overflowY="hidden";
+		document.querySelector(".menud").style.display="block";
+		document.querySelector(".fpm").style.display="block";
+		document.querySelector(".menud1").style.display="none";
+		document.querySelector(".bi").style.backgroundColor="black";
+        document.getElementById("me").className = "jul201";
+		document.querySelector(".bmenu").style.display="none";
+		document.querySelector(".bmenu1").style.display="block";
+	}
+	function sm(){
+		document.querySelector("body").style.overflowY="visible";
+		document.querySelector(".menud").style.display="none";
+		document.querySelector(".fpm").style.display="none";
+		document.querySelector(".menud1").style.display="block";
+		document.querySelector(".bi").style.background="linear-gradient(to bottom, black 0%, transparent 80%)";
+        document.getElementById("me").className = "jul20";
+		document.querySelector(".bmenu1").style.display="none";
+		document.querySelector(".bmenu").style.display="block";
+	}
+</script>
+<script type="text/javascript">
+function cb1(){
+	document.querySelector(".b1").style.display = "block";
+	document.querySelector(".b2").style.display = "none";
+	document.querySelector(".b3").style.display = "none";
+	document.querySelector(".a1").style.opacity = 1;
+	document.querySelector(".a2").style.opacity = 0.8;
+	document.querySelector(".a3").style.opacity = 0.8;
+}
+function cb2(){
+	document.querySelector(".b2").style.display = "block";
+	document.querySelector(".b1").style.display = "none";
+	document.querySelector(".b3").style.display = "none";
+	document.querySelector(".a1").style.opacity = 0.8;
+	document.querySelector(".a2").style.opacity = 1;
+	document.querySelector(".a3").style.opacity = 0.8;
+}
+function cb3(){
+	document.querySelector(".b3").style.display = "block";
+	document.querySelector(".b2").style.display = "none";
+	document.querySelector(".b1").style.display = "none";
+	document.querySelector(".a1").style.opacity = 0.8;
+	document.querySelector(".a2").style.opacity = 0.8;
+	document.querySelector(".a3").style.opacity = 1;
+}
+function spm1(){
+	document.querySelector(".ba1").style.display = "block";
+	document.querySelector(".ii").style.display = "block";
+	document.querySelector(".ba2").style.display = "none";
+	document.querySelector(".ia").style.display = "none";
+	document.querySelector(".ba3").style.display = "none";
+	document.querySelector(".ig").style.display = "none";
+	document.querySelector(".ab1").style.opacity = 1;
+	document.querySelector(".ab2").style.opacity = 0.8;
+	document.querySelector(".ab3").style.opacity = 0.8;
+}
+function spm2(){
+	document.querySelector(".ba2").style.display = "block";
+	document.querySelector(".ia").style.display = "block";
+	document.querySelector(".ii").style.display = "none";
+	document.querySelector(".ba1").style.display = "none";
+	document.querySelector(".ba3").style.display = "none";
+	document.querySelector(".ig").style.display = "none";
+	document.querySelector(".ab2").style.opacity = 1;
+	document.querySelector(".ab1").style.opacity = 0.8;
+	document.querySelector(".ab3").style.opacity = 0.8;
+}
+function spm3(){
+	document.querySelector(".ba3").style.display = "block";
+	document.querySelector(".ig").style.display = "block";
+	document.querySelector(".ii").style.display = "none";
+	document.querySelector(".ba2").style.display = "none";
+	document.querySelector(".ia").style.display = "none";
+	document.querySelector(".ba1").style.display = "none";
+	document.querySelector(".ab3").style.opacity = 1;
+	document.querySelector(".ab2").style.opacity = 0.8;
+	document.querySelector(".ab1").style.opacity = 0.8;
+}
+function spma1(){
+	document.querySelector(".bba1").style.display = "block";
+	document.querySelector(".idi").style.display = "block";
+	document.querySelector(".bba2").style.display = "none";
+	document.querySelector(".il").style.display = "none";
+	document.querySelector(".bba3").style.display = "none";
+	document.querySelector(".ide").style.display = "none";
+	document.querySelector(".bba4").style.display = "none";
+	document.querySelector(".iga").style.display = "none";
+	document.querySelector(".bba5").style.display = "none";
+	document.querySelector(".iarq").style.display = "none";
+	document.querySelector(".bba6").style.display = "none";
+	document.querySelector(".imu").style.display = "none";
+	document.querySelector(".bba7").style.display = "none";
+	document.querySelector(".ifo").style.display = "none";
+	document.querySelector(".bb1").style.opacity = 1;
+	document.querySelector(".bb2").style.opacity = 0.8;
+	document.querySelector(".bb3").style.opacity = 0.8;
+	document.querySelector(".bb4").style.opacity = 0.8;
+	document.querySelector(".bb5").style.opacity = 0.8;
+	document.querySelector(".bb6").style.opacity = 0.8;
+	document.querySelector(".bb7").style.opacity = 0.8;
+}
+function spma2(){
+	document.querySelector(".bba2").style.display = "block";
+	document.querySelector(".il").style.display = "block";
+	document.querySelector(".idi").style.display = "none";
+	document.querySelector(".bba1").style.display = "none";
+	document.querySelector(".bba3").style.display = "none";
+	document.querySelector(".ide").style.display = "none";
+	document.querySelector(".bba4").style.display = "none";
+	document.querySelector(".iga").style.display = "none";
+	document.querySelector(".bba5").style.display = "none";
+	document.querySelector(".iarq").style.display = "none";
+	document.querySelector(".bba6").style.display = "none";
+	document.querySelector(".imu").style.display = "none";
+	document.querySelector(".bba7").style.display = "none";
+	document.querySelector(".ifo").style.display = "none";
+	document.querySelector(".bb1").style.opacity = 0.8;
+	document.querySelector(".bb2").style.opacity = 1;
+	document.querySelector(".bb3").style.opacity = 0.8;
+	document.querySelector(".bb4").style.opacity = 0.8;
+	document.querySelector(".bb5").style.opacity = 0.8;
+	document.querySelector(".bb6").style.opacity = 0.8;
+	document.querySelector(".bb7").style.opacity = 0.8;
+}
+function spma3(){
+	document.querySelector(".bba3").style.display = "block";
+	document.querySelector(".ide").style.display = "block";
+	document.querySelector(".idi").style.display = "none";
+	document.querySelector(".bba2").style.display = "none";
+	document.querySelector(".il").style.display = "none";
+	document.querySelector(".bba1").style.display = "none";
+	document.querySelector(".bba4").style.display = "none";
+	document.querySelector(".iga").style.display = "none";
+	document.querySelector(".bba5").style.display = "none";
+	document.querySelector(".iarq").style.display = "none";
+	document.querySelector(".bba6").style.display = "none";
+	document.querySelector(".imu").style.display = "none";
+	document.querySelector(".bba7").style.display = "none";
+	document.querySelector(".ifo").style.display = "none";
+	document.querySelector(".bb1").style.opacity = 0.8;
+	document.querySelector(".bb2").style.opacity = 0.8;
+	document.querySelector(".bb3").style.opacity = 1;
+	document.querySelector(".bb4").style.opacity = 0.8;
+	document.querySelector(".bb5").style.opacity = 0.8;
+	document.querySelector(".bb6").style.opacity = 0.8;
+	document.querySelector(".bb7").style.opacity = 0.8;
+}
+function spma4(){
+	document.querySelector(".bba3").style.display = "none";
+	document.querySelector(".ide").style.display = "none";
+	document.querySelector(".idi").style.display = "none";
+	document.querySelector(".bba2").style.display = "none";
+	document.querySelector(".il").style.display = "none";
+	document.querySelector(".bba1").style.display = "none";
+	document.querySelector(".bba4").style.display = "block";
+	document.querySelector(".iga").style.display = "block";
+	document.querySelector(".bba5").style.display = "none";
+	document.querySelector(".iarq").style.display = "none";
+	document.querySelector(".bba6").style.display = "none";
+	document.querySelector(".imu").style.display = "none";
+	document.querySelector(".bba7").style.display = "none";
+	document.querySelector(".ifo").style.display = "none";
+	document.querySelector(".bb1").style.opacity = 0.8;
+	document.querySelector(".bb2").style.opacity = 0.8;
+	document.querySelector(".bb3").style.opacity = 0.8;
+	document.querySelector(".bb4").style.opacity = 1;
+	document.querySelector(".bb5").style.opacity = 0.8;
+	document.querySelector(".bb6").style.opacity = 0.8;
+	document.querySelector(".bb7").style.opacity = 0.8;
+}
+function spma5(){
+	document.querySelector(".bba3").style.display = "none";
+	document.querySelector(".ide").style.display = "none";
+	document.querySelector(".idi").style.display = "none";
+	document.querySelector(".bba2").style.display = "none";
+	document.querySelector(".il").style.display = "none";
+	document.querySelector(".bba1").style.display = "none";
+	document.querySelector(".bba4").style.display = "none";
+	document.querySelector(".iga").style.display = "none";
+	document.querySelector(".bba5").style.display = "block";
+	document.querySelector(".iarq").style.display = "block";
+	document.querySelector(".bba6").style.display = "none";
+	document.querySelector(".imu").style.display = "none";
+	document.querySelector(".bba7").style.display = "none";
+	document.querySelector(".ifo").style.display = "none";
+	document.querySelector(".bb1").style.opacity = 0.8;
+	document.querySelector(".bb2").style.opacity = 0.8;
+	document.querySelector(".bb3").style.opacity = 0.8;
+	document.querySelector(".bb4").style.opacity = 0.8;
+	document.querySelector(".bb5").style.opacity = 1;
+	document.querySelector(".bb6").style.opacity = 0.8;
+	document.querySelector(".bb7").style.opacity = 0.8;
+}
+function spma6(){
+	document.querySelector(".bba3").style.display = "none";
+	document.querySelector(".ide").style.display = "none";
+	document.querySelector(".idi").style.display = "none";
+	document.querySelector(".bba2").style.display = "none";
+	document.querySelector(".il").style.display = "none";
+	document.querySelector(".bba1").style.display = "none";
+	document.querySelector(".bba4").style.display = "none";
+	document.querySelector(".iga").style.display = "none";
+	document.querySelector(".bba5").style.display = "none";
+	document.querySelector(".iarq").style.display = "none";
+	document.querySelector(".bba6").style.display = "block";
+	document.querySelector(".imu").style.display = "block";
+	document.querySelector(".bba7").style.display = "none";
+	document.querySelector(".ifo").style.display = "none";
+	document.querySelector(".bb1").style.opacity = 0.8;
+	document.querySelector(".bb2").style.opacity = 0.8;
+	document.querySelector(".bb3").style.opacity = 0.8;
+	document.querySelector(".bb4").style.opacity = 0.8;
+	document.querySelector(".bb5").style.opacity = 0.8;
+	document.querySelector(".bb6").style.opacity = 1;
+	document.querySelector(".bb7").style.opacity = 0.8;
+}
+function spma7(){
+	document.querySelector(".bba3").style.display = "none";
+	document.querySelector(".ide").style.display = "none";
+	document.querySelector(".idi").style.display = "none";
+	document.querySelector(".bba2").style.display = "none";
+	document.querySelector(".il").style.display = "none";
+	document.querySelector(".bba1").style.display = "none";
+	document.querySelector(".bba4").style.display = "none";
+	document.querySelector(".iga").style.display = "none";
+	document.querySelector(".bba5").style.display = "none";
+	document.querySelector(".iarq").style.display = "none";
+	document.querySelector(".bba6").style.display = "none";
+	document.querySelector(".imu").style.display = "none";
+	document.querySelector(".bba7").style.display = "block";
+	document.querySelector(".ifo").style.display = "block";
+	document.querySelector(".bb1").style.opacity = 0.8;
+	document.querySelector(".bb2").style.opacity = 0.8;
+	document.querySelector(".bb3").style.opacity = 0.8;
+	document.querySelector(".bb4").style.opacity = 0.8;
+	document.querySelector(".bb5").style.opacity = 0.8;
+	document.querySelector(".bb6").style.opacity = 0.8;
+	document.querySelector(".bb7").style.opacity = 1;
+}
+function spmb1(){
+	document.querySelector(".bbc1").style.display = "block";
+	document.querySelector(".ibn").style.display = "block";
+	document.querySelector(".bbc2").style.display = "none";
+	document.querySelector(".iba").style.display = "none";
+	document.querySelector(".bbc3").style.display = "none";
+	document.querySelector(".iff").style.display = "none";
+	document.querySelector(".bc1").style.opacity = 1;
+	document.querySelector(".bc2").style.opacity = 0.8;
+	document.querySelector(".bc3").style.opacity = 0.8;
+}
+function spmb2(){
+	document.querySelector(".bbc2").style.display = "block";
+	document.querySelector(".iba").style.display = "block";
+	document.querySelector(".ibn").style.display = "none";
+	document.querySelector(".bbc1").style.display = "none";
+	document.querySelector(".bbc3").style.display = "none";
+	document.querySelector(".iff").style.display = "none";
+	document.querySelector(".bc2").style.opacity = 1;
+	document.querySelector(".bc1").style.opacity = 0.8;
+	document.querySelector(".bc3").style.opacity = 0.8;
+}
+function spmb3(){
+	document.querySelector(".bbc3").style.display = "block";
+	document.querySelector(".iff").style.display = "block";
+	document.querySelector(".ibn").style.display = "none";
+	document.querySelector(".bbc2").style.display = "none";
+	document.querySelector(".iba").style.display = "none";
+	document.querySelector(".bbc1").style.display = "none";
+	document.querySelector(".bc3").style.opacity = 1;
+	document.querySelector(".bc2").style.opacity = 0.8;
+	document.querySelector(".bc1").style.opacity = 0.8;
+}
+</script>
+<script type="text/javascript">
+	function sp1(){
+		window.location.href="index.html"
+	}
+	function sp2(){
+		window.location.href="mapa.html"
+	}
+	function sp3(){
+		window.location.href="multi.html"
+	}
+	function ctp(){
+		i.className="tp1";
+	}
+</script>
+</body>
+</html>
